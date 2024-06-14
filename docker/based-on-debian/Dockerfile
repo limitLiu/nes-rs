@@ -15,12 +15,13 @@ RUN mkdir /build \
     && rustup target add aarch64-unknown-linux-gnu \
     && dpkg --add-architecture arm64 \
     && apt update \
-    && apt install -y gcc-aarch64-linux-gnu libsdl2-dev:arm64 libsdl2-image-dev:arm64 libsdl2-ttf-dev:arm64
+    && apt install -y libsdl2-dev gcc-aarch64-linux-gnu libsdl2-dev:arm64 libsdl2-image-dev:arm64 libsdl2-ttf-dev:arm64
 
 # copy sh
-COPY debug /
-COPY release /
+COPY amd64-debug /
+COPY amd64-release /
+COPY aarch64-release /
 
-RUN chmod +x /debug /release
+RUN chmod +x /amd64-debug /amd64-release /aarch64-release
 
 # ENTRYPOINT ["/release"]

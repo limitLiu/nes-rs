@@ -2,4 +2,4 @@
 
 source $HOME/.cargo/env
 cd /build
-cargo build --target=aarch64-unknown-linux-gnu
+cargo build --release
