@@ -5,7 +5,7 @@
 ```bash
 cd ./docker/based-on-debian
 docker build -t cross-compilation .
-cd ..
+cd ../..
 mkdir -p $PWD/.docker/.cargo/git
 mkdir -p $PWD/.docker/.cargo/registry
 ```

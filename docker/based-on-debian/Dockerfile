@@ -9,9 +9,8 @@ RUN mkdir /build \
     && cd \
     && apt update \
     && apt install -y curl build-essential \
-    && curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y \
+    && curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain nightly \
     && source $HOME/.cargo/env \
-    && rustup default nightly \
     && rustup target add aarch64-unknown-linux-gnu \
     && dpkg --add-architecture arm64 \
     && apt update \

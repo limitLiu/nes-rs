@@ -4,3 +4,5 @@ pub mod prelude {
   #[cfg(feature = "vita")]
   pub use sdl2_vita as sdl2;
 }
+
+pub mod err;
