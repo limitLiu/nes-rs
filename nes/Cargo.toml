@@ -1,0 +1,12 @@
+[package]
+name = "nes-rs"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+name = "nes"
+
+[dependencies]
+bitflags = "2.5.0"
+rand = "0.8.5"
+duplicated = { path = "../duplicated" }

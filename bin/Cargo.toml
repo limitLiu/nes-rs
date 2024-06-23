@@ -1,0 +1,17 @@
+[package]
+name = "bin"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+sdl2 = { version = "0.37.0", optional = true }
+sdl2_vita = { package = "sdl2", version = "0.37.0", features = ["use-pkgconfig"], optional = true }
+nes = { package = "nes-rs", path = "../nes/" }
+
+[features]
+default = ["sdl2"]
+vita = ["sdl2_vita"]
+
+[package.metadata.vita]
+title_id = "RUSTVITA1"
+title_name = "NES Emulator"
