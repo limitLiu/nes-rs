@@ -1,4 +1,3 @@
-use super::prelude::*;
 use nes::util::err::EmuError;
 use sdl2::{video, IntegerOrSdlError};
 

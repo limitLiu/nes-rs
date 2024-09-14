@@ -1,12 +1,4 @@
-pub mod prelude {
-  #[cfg(not(feature = "vita"))]
-  pub use sdl2;
-  #[cfg(feature = "vita")]
-  pub use sdl2_vita as sdl2;
-}
-
 use nes::core::cartridge::Cartridge;
-use prelude::*;
 
 use sdl2::event::Event;
 use sdl2::keyboard::Keycode;

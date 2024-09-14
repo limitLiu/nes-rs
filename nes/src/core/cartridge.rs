@@ -1,11 +1,14 @@
-#[derive(Debug, duplicated::New)]
+use macros::{public, New};
+
+#[derive(Debug, New)]
 pub struct ROM {
   pub prg: Vec<u8>,
   pub chr: Vec<u8>,
   pub mapper: u8,
 }
 
-#[derive(Debug, duplicated::New)]
+#[derive(Debug, New)]
+#[public]
 pub struct Cartridge {
-  pub rom: ROM,
+  rom: ROM,
 }

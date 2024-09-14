@@ -1,3 +1,5 @@
+cargo-features = ["edition2024"]
+
 [package]
 name = "nes-rs"
 version.workspace = true
@@ -7,6 +9,6 @@ edition.workspace = true
 name = "nes"
 
 [dependencies]
-bitflags = "2.5.0"
+bitflags = "2.6.0"
 rand = "0.8.5"
-duplicated = { path = "../duplicated" }
+macros = { path = "../macros" }
